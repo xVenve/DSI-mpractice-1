@@ -10,7 +10,7 @@
       Consumicion:
       <select name="comidas" [(ngModel)]="comidaSeleccionada">
         <option *ngFor="let comida of getComidas(); let i = index" [value]="i">
-          {{ comida[0] }} ({{ comida[1] }}€)
+          {{ comida[0] }} ({{ comida[1] | currency: "EUR":"symbol":"1.2-2":"es" }})
         </option>
       </select>
       <button class="boton" type="button" (click)="addComida()">+</button>
@@ -25,13 +25,13 @@
       </tr>
       <tr *ngFor="let com of cuenta; let i = index">
         <td>{{ com[0] }}</td>
-        <td>{{ com[1] }}€</td>
+        <td>{{ com[1] | currency: "EUR":"symbol":"1.2-2":"es" }}</td>
         <button class="boton" type="button" (click)="delComida(i)">-</button>
       </tr>
       <tr>
         <td><b>TOTAL</b></td>
         <td>
-          <b>{{ total }}€</b>
+          <b>{{ total | currency: "EUR":"symbol":"1.2-2":"es" }}</b>
         </td>
       </tr>
     </table>

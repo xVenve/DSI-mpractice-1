@@ -28,12 +28,10 @@ export class AppComponent {
   public addComida() {
     this.cuenta.push(this.comidas[this.comidaSeleccionada]);
     this.total += this.comidas[this.comidaSeleccionada][1];
-    this.total = Math.round(this.total * 100) / 100;
   }
 
   public delComida(i: number) {
     this.total -= this.cuenta[i][1];
-    this.total = Math.round(this.total * 100) / 100;
     this.cuenta.splice(i, 1);
   }
 }
