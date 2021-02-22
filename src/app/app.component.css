@@ -1,0 +1,12 @@
+div {
+  background-color: #ff7c54;
+}
+
+.boton {
+  margin: 3px;
+}
+
+th {
+  text-decoration: underline;
+  text-align: left;
+}
