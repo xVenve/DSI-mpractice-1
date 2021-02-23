@@ -18,14 +18,16 @@
 
     <p><b>Consumiciones:</b></p>
 
-    <table style="width: 100%">
+    <table>
       <tr>
         <th>Producto</th>
         <th>Precio</th>
       </tr>
       <tr *ngFor="let com of cuenta; let i = index">
         <td>{{ com[0] }}</td>
-        <td>{{ com[1] | currency: "EUR":"symbol":"1.2-2":"es" }}</td>
+        <td id="precio">
+          {{ com[1] | currency: "EUR":"symbol":"1.2-2":"es" }}
+        </td>
         <button class="boton" type="button" (click)="delComida(i)">-</button>
       </tr>
       <tr>
