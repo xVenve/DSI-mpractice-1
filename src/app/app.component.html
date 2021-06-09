@@ -7,28 +7,28 @@
 
   <div>
     <p>
-      Consumicion:
-      <select name="comidas" [(ngModel)]="comidaSeleccionada">
-        <option *ngFor="let comida of getComidas(); let i = index" [value]="i">
-          {{ comida[0] }} ({{ comida[1] | currency: "EUR":"symbol":"1.2-2":"es" }})
+      Consumption:
+      <select name="meals" [(ngModel)]="foodSelected">
+        <option *ngFor="let meal of getMeals(); let i = index" [value]="i">
+          {{ meal[0] }} ({{ meal[1] | currency: "EUR":"symbol":"1.2-2":"es" }})
         </option>
       </select>
-      <button class="boton" type="button" (click)="addComida()">+</button>
+      <button class="button" type="button" (click)="addMeal()">+</button>
     </p>
 
-    <p><b>Consumiciones:</b></p>
+    <p><b>Consumption:</b></p>
 
     <table>
       <tr>
-        <th>Producto</th>
-        <th>Precio</th>
+        <th>Product</th>
+        <th>Price</th>
       </tr>
-      <tr *ngFor="let com of cuenta; let i = index">
+      <tr *ngFor="let com of bill; let i = index">
         <td>{{ com[0] }}</td>
-        <td id="precio">
+        <td id="price">
           {{ com[1] | currency: "EUR":"symbol":"1.2-2":"es" }}
         </td>
-        <button class="boton" type="button" (click)="delComida(i)">-</button>
+        <button class="button" type="button" (click)="delMeal(i)">-</button>
       </tr>
       <tr>
         <td><b>TOTAL</b></td>

@@ -6,32 +6,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'COMANDA';
+  title: string = 'ORDER';
   total: number = 0;
-  public comidaSeleccionada = 0;
+  public foodSelected = 0;
 
-  private comidas: Array<[string, number]> = [
-    ['Ternera con Sa Cho', 6.05],
-    ['Pato asado de Pekin', 9.5],
-    ['Fideos chinos con tres delicias', 4.95],
-    ['Pollo con almendras', 4.9],
-    ['Cerdo agridulce', 4.7],
-    ['Tallarines fritos con gambas', 4.35],
+  private meals: Array<[string, number]> = [
+    ['Beef with Sa Cho', 6.05],
+    ['Beijing roast duck', 9.5],
+    ['Chinese noodles with three delicacies', 4.95],
+    ['Chicken with almonds', 4.9],
+    ['Sweet and sour pork', 4.7],
+    ['Fried noodles with prawns', 4.35],
   ];
 
-  public getComidas() {
-    return this.comidas;
+  public getMeals() {
+    return this.meals;
   }
 
-  public cuenta: Array<[string, number]> = [];
+  public bill: Array<[string, number]> = [];
 
-  public addComida() {
-    this.cuenta.push(this.comidas[this.comidaSeleccionada]);
-    this.total += this.comidas[this.comidaSeleccionada][1];
+  public addMeal() {
+    this.bill.push(this.meals[this.foodSelected]);
+    this.total += this.meals[this.foodSelected][1];
   }
 
-  public delComida(i: number) {
-    this.total -= this.cuenta[i][1];
-    this.cuenta.splice(i, 1);
+  public delMeal(i: number) {
+    this.total -= this.bill[i][1];
+    this.bill.splice(i, 1);
   }
 }

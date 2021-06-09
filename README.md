@@ -1,14 +1,18 @@
-# Practica01
+# DSI Practice 1
 
-Objetivo de la práctica: utilizando los conocimientos aprendidos en las aplicaciones de ejemplo: APP01 y APP02, programar una aplicación para edición de comandas de restaurante:
-- Al pulsar el botón [+] el producto elegido será añadido a la comanda y se actualizará automáticamente el Total.
-- Al pulsar cualquiera de los botones [-] se eliminará el producto de la lista de productos y se actualizará automáticamente el Total
+Objective of the practice: using the knowledge learned in the example applications: APP01 and APP02, program an application for editing restaurant orders:
 
-## Deploy en GitHub Pages
+- Pressing the [+] button will add the chosen product to the order and automatically update the Total.
+- Pressing any of the [-] buttons will remove the product from the product list and automatically update the Total.
 
-No hace falta crear la rama, se crea sola.
+## Deploy in GitHub Pages
 
-Una vez creado el repositorio con todo en GitHub.
+There is no need to create the branch, it creates itself.
+
+Once the repository is created with everything in GitHub.
+
+Translated with www.DeepL.com/Translator (free version)
+
 ```
 ng add angular-cli-ghpages
 ng deploy --base-href=/<repositoryname>/
