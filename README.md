@@ -11,8 +11,6 @@ There is no need to create the branch, it creates itself.
 
 Once the repository is created with everything in GitHub.
 
-Translated with www.DeepL.com/Translator (free version)
-
 ```
 ng add angular-cli-ghpages
 ng deploy --base-href=/<repositoryname>/
