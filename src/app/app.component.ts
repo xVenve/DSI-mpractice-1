@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'ORDER';
-  total: number = 0;
+  title = 'ORDER';
+  total = 0;
   public foodSelected = 0;
 
   private meals: Array<[string, number]> = [
